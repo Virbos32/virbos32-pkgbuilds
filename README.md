@@ -8,7 +8,7 @@ PKGBUILDs for Virbos32
 
 # Packages Dropped:
 
-- vscodium(upsteam): electron itself does not support i686(
+- vscodium(upsteam): electron itself does not support i686(use `vscodium32` if you are on `i686`)
 - librewolf: firefox is already on repo and usually every version has diiferent issues
 - nvm: dependency of vscodium
 - vscodium-marketplace: vscodium itself is unsupported
