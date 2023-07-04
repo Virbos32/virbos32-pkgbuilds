@@ -1,6 +1,9 @@
 # virbos32-pkgbuilds
 PKGBUILDs for Virbos32
 
+# Packages Built:
+- ninvaders: building fine on `pentium4`.. `i686` untested
+
 # Packages Dropped:
 
 - vscodium: electron itself does not support i686
