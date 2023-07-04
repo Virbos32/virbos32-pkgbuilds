@@ -1,9 +1,9 @@
 _pkgname=ninvaders
-pkgname="${_pkgname}"-git
+pkgname="${_pkgname}"
 pkgver=r2.98cab46
 pkgrel=1
 pkgdesc="Ncurses based space invaders clone"
-arch=("i686" "x86_64")
+arch=("i686" "x86_64" "pentium4")
 url="http://ninvaders.sourceforge.net"
 license=("GPL")
 source=("${_pkgname}::git+https://git.code.sf.net/p/ninvaders0/code")
