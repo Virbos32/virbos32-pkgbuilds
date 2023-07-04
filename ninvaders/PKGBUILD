@@ -1,0 +1,29 @@
+pkgname=ninvaders
+pkgver=0.1.1
+pkgrel=3
+pkgdesc='Ncurses based space invaders clone'
+arch=('i686' 'pentium4' 'x86_64')
+url='http://ninvaders.sourceforge.net/'
+license=('GPL')
+source=(http://downloads.sourceforge.net/sourceforge/ninvaders/$pkgname-$pkgver.tar.gz)
+md5sums=('97b2c3fb082241ab5c56ab728522622b')
+depends=('ncurses')
+
+prepare(){
+  if [ "${CARCH}" = "pentium4" ]; then
+    CARCH="pentium4"
+    CHOST="i686-pc-linux-gnu"
+    CFLAGS="-march=pentium4 -mtune=generic -O2 -pipe -fno-plt"
+    CXXFLAGS="-march=pentium4 -mtune=generic -O2 -pipe -fno-plt"
+  fi
+}
+
+build() {
+  cd $pkgname-$pkgver
+  make CFLAGS="${CFLAGS}"
+}
+
+package() {
+  cd $pkgname-$pkgver
+  install -m755 -D nInvaders $pkgdir/usr/bin/$pkgname
+}
