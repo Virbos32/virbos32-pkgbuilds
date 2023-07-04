@@ -6,7 +6,7 @@ arch=('pentium4') # i686 is unsupported due to sse2 depency...
 url="https://github.com/VSCodium/vscodium"
 license=('MIT')
 depends=(
-        fontconfig libxtst gtk3 python cairo alsa-lib nss gcc-libs libnotify libxss gconf
+        fontconfig libxtst gtk3 python cairo alsa-lib nss gcc-libs libnotify libxss
         'glibc>=2.28-4'
         )
 optdepends=(
